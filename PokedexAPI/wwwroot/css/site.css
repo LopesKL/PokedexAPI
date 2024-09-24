@@ -1,0 +1,284 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+body {
+    background-color: #dddbdb8c;
+}
+
+header {
+
+}
+
+#nomePokemon {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#enviar {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 0px;
+}
+
+#Backgrowndheader {
+    background-color: #E3350D;
+    padding-top: 10px ;
+
+}
+
+#pesquisa {
+    background-color: rgb(54, 54, 54);
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+    padding: 15px;
+}
+
+#botaoColapse {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.margem {
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: -15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+    .margem img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .margem span {
+        padding: 15px;
+    }
+
+#botaoCarregar {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    height: 50px;
+    width: 350px;
+    font-size: 150%;
+}
+
+#banner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    padding: 5px 0px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 200%;
+}
+
+#typeSelect {
+    width: 200px;
+    margin-left: 211px;
+}
+
+.banner img {
+    width: 250px;
+    height: 250px;
+}
+
+.sprite {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+#nomePokemonBanner {
+    font-size: 200%;
+}
+
+.bug {
+    background-color: #729f3f;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.dragon {
+    background-color: #53a4cf;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.fairy {
+    background-color: #fdb9e9;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.fire {
+    background-color: #fd7d24;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.ghost {
+    background-color: #7b62a3;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.ground {
+    background-color: #f7de3f;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.normal {
+    background-color: #a4acaf;
+}
+
+.psychic {
+    background-color: #f366b9;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.steel {
+    background-color: #9eb7b8;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.dark {
+    background-color: #707070;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.electric {
+    background-color: #eed535;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.fighting {
+    background-color: #d56723;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.flying {
+    background-color: #3dc7ef;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.grass {
+    background-color: #9bcc50;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.ice {
+    background-color: #51c4e7;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.poison {
+    background-color: #b97fc9;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.rock {
+    background-color: #a38c21;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.water {
+    background-color: #4592c4;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.margem span {
+    padding: 7px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: rgb(54, 54, 54);
+    border-start-end-radius: 20px;
+    border-start-start-radius: 20px;
+}
