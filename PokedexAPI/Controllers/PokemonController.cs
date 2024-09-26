@@ -38,7 +38,7 @@ namespace PokedexAPI.Controllers {
 
 
         [HttpPut]
-        public async Task<IActionResult> PutPokemon(int id, Pokemon pokemon) {
+        public async Task<IActionResult> PutPokemon(int numeroPokedex, Pokemon pokemon) {
 
             _context.Entry(pokemon).State = EntityState.Modified;
 
@@ -46,7 +46,7 @@ namespace PokedexAPI.Controllers {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException) {
-                if (!PokemonExists(id)) {
+                if (!PokemonExists(numeroPokedex)) {
                     return NotFound("Pokémon não encontrado.");
                 }
                 else {
@@ -57,29 +57,26 @@ namespace PokedexAPI.Controllers {
             return NoContent(); 
         }
 
-        private bool PokemonExists(int id) {
-            return _context.Pokemons.Any(e => e.Id == id);
+        private bool PokemonExists(int numeroPokedex) {
+            return _context.Pokemons.Any(e => e.Id == numeroPokedex);
         }
 
 
         [HttpDelete]
         public IActionResult Delete([FromBody] Pokemon pokemonToDelete) {
-            // Verifique se o objeto recebido é válido
+
             if (pokemonToDelete == null || pokemonToDelete.Id <= 0) {
                 return BadRequest("Pokémon inválido.");
             }
 
-            // Aqui você deve acessar o contexto do seu banco de dados ou repositório
             var pokemon = _context.Pokemons.FirstOrDefault(p => p.Id == pokemonToDelete.Id);
 
             if (pokemon == null) {
                 return NotFound("Pokémon não encontrado.");
             }
 
-            // Remove o Pokémon do banco de dados
             _context.Pokemons.Remove(pokemon);
 
-            // Salva as mudanças no banco de dados
             _context.SaveChanges();
 
             return Ok("Pokémon excluído com sucesso.");

@@ -4,6 +4,7 @@ namespace PokedexAPI.Models {
     [Table("Pokemon")]
     public class Pokemon {
         public int Id { get; set; }
+        public int NumeroPokedex { get; set; }
         public string Name { get; set; }
         public string FrontSpriteUrl { get; set; }
         public string BackSpriteUrl { get; set; }
