@@ -60,6 +60,32 @@ namespace PokedexAPI.Controllers {
         private bool PokemonExists(int id) {
             return _context.Pokemons.Any(e => e.Id == id);
         }
+
+
+        [HttpDelete]
+        public IActionResult Delete([FromBody] Pokemon pokemonToDelete) {
+            // Verifique se o objeto recebido é válido
+            if (pokemonToDelete == null || pokemonToDelete.Id <= 0) {
+                return BadRequest("Pokémon inválido.");
+            }
+
+            // Aqui você deve acessar o contexto do seu banco de dados ou repositório
+            var pokemon = _context.Pokemons.FirstOrDefault(p => p.Id == pokemonToDelete.Id);
+
+            if (pokemon == null) {
+                return NotFound("Pokémon não encontrado.");
+            }
+
+            // Remove o Pokémon do banco de dados
+            _context.Pokemons.Remove(pokemon);
+
+            // Salva as mudanças no banco de dados
+            _context.SaveChanges();
+
+            return Ok("Pokémon excluído com sucesso.");
+        }
+
+
     }
 
 }
